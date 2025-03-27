@@ -24,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <title>BR TRD</title>
       <head>
         <script type="text/javascript" src="https://s3.tradingview.com/tv.js" defer />
       </head>
