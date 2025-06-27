@@ -10,7 +10,7 @@ export default function Chart({ id }: TProps) {
   const srciptData = `new TradingView.widget({
       "autosize": true,
       "symbol": "${`BINANCE:${id}USDT`}",
-      "interval": "1W",
+      "interval": "1M",
       "timezone": "Asia/Jakarta",
       "theme": "dark",
       "style": "1",
