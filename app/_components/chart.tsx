@@ -4,13 +4,14 @@ import { useRef, useEffect } from "react";
 
 type TProps = {
   id: string;
+  symbol: string;
 };
-export default function Chart({ id }: TProps) {
+export default function Chart({ id, symbol }: TProps) {
   const isRef = useRef<HTMLDivElement | null>(null);
   const srciptData = `new TradingView.widget({
       "autosize": true,
-      "symbol": "${`BINANCE:${id}USDT`}",
-      "interval": "1H",
+      "symbol": "${symbol}",
+      "interval": "${id === "BTC.D" ? "1D" : "1H"}",
       "timezone": "Asia/Jakarta",
       "theme": "dark",
       "style": "1",
@@ -37,7 +38,7 @@ export default function Chart({ id }: TProps) {
   return (
     <>
       <div className="tradingview-widget-container" ref={isRef}>
-        <div className={"h-[33vh] lg:h-[100vh]"} id={`tradingview_view_${id}`}></div>
+        <div className={"h-[20vh] lg:h-[100vh]"} id={`tradingview_view_${id}`}></div>
       </div>
     </>
   );
