@@ -38,7 +38,7 @@ export default function Chart({ id, symbol }: TProps) {
   return (
     <>
       <div className="tradingview-widget-container" ref={isRef}>
-        <div className={"h-[20vh] lg:h-[100vh]"} id={`tradingview_view_${id}`}></div>
+        <div className={"h-[25vh] lg:h-[100vh]"} id={`tradingview_view_${id}`}></div>
       </div>
     </>
   );
