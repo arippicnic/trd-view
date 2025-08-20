@@ -11,7 +11,7 @@ export default function Chart({ id, symbol }: TProps) {
   const srciptData = `new TradingView.widget({
       "autosize": true,
       "symbol": "${symbol}",
-      "interval": "${id === "BTC.D" ? "1D" : "1H"}",
+      "interval": "${id === "BTC.D" ? "1W" : "1H"}",
       "timezone": "Asia/Jakarta",
       "theme": "dark",
       "style": "1",
@@ -38,7 +38,7 @@ export default function Chart({ id, symbol }: TProps) {
   return (
     <>
       <div className="tradingview-widget-container" ref={isRef}>
-        <div className={"h-[25vh] lg:h-[100vh]"} id={`tradingview_view_${id}`}></div>
+        <div className={"h-[50vh] lg:h-[100vh]"} id={`tradingview_view_${id}`}></div>
       </div>
     </>
   );
