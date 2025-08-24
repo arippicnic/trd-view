@@ -11,7 +11,7 @@ export default function Chart({ id, symbol }: TProps) {
   const srciptData = `new TradingView.widget({
       "autosize": true,
       "symbol": "${symbol}",
-      "interval": "${id === "BTC.D" ? "1W" : "1H"}",
+      "interval": "1W",
       "timezone": "Asia/Jakarta",
       "theme": "dark",
       "style": "1",
